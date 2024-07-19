@@ -6,7 +6,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 
 object ApiClient {
-    private const val BASE_URL = "https://api.openai.com/"
+    private const val BASE_URL = "link base url api"
 
     private val client: OkHttpClient
         get() {
