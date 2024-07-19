@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreenActivity"
+    android:background="@color/white"
+    android:id="@+id/constraint_layout">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="348dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/kotak6"
+        app:layout_constraintEnd_toEndOf="@+id/btn_riwayatbaru"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_historynew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/bg_home"
+        android:layout_width="412dp"
+        android:layout_height="277dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/home_kotak1" />
+
+    <TextView
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firacode_bold"
+        android:text="Halo, User"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <ImageButton
+        android:id="@+id/btn_user"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toEndOf="@+id/txt_username"
+        app:layout_constraintTop_toTopOf="@+id/txt_username"
+        app:layout_constraintVertical_bias="0.517"
+        app:srcCompat="@drawable/tombol_user" />
+
+    <ImageView
+        android:id="@+id/kotak1"
+        android:layout_width="380dp"
+        android:layout_height="55dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username"
+        app:layout_constraintVertical_bias="0.039"
+        app:srcCompat="@drawable/home_kotak2" />
+
+    <Spinner
+        android:id="@+id/spinner_source_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_switch"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="@+id/kotak1"
+        app:layout_constraintTop_toTopOf="@+id/kotak1"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <ImageButton
+        android:id="@+id/btn_switch"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_switch"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak1"
+        app:layout_constraintEnd_toEndOf="@+id/kotak1"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/kotak1"
+        app:layout_constraintTop_toTopOf="@+id/kotak1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Spinner
+        android:id="@+id/spinner_target_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak1"
+        app:layout_constraintEnd_toEndOf="@+id/kotak1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_switch"
+        app:layout_constraintTop_toTopOf="@+id/kotak1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/btn_kamera"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/home_kotak4" />
+
+    <ImageView
+        android:id="@+id/btn_galeri"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="4dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_kamera"
+        app:layout_constraintTop_toTopOf="@+id/btn_kamera"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/home_kotak4" />
+
+    <ImageView
+        android:id="@+id/kotak6"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="15dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/home_kotak5" />
+
+    <ImageButton
+        android:id="@+id/btn_home_on"
+        android:layout_width="35dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="32dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/kotak6"
+        app:layout_constraintTop_toTopOf="@+id/kotak6"
+        app:srcCompat="@drawable/tombol_home_menyala" />
+
+    <ImageButton
+        android:id="@+id/btn_kuis"
+        android:layout_width="32dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_home_on"
+        app:layout_constraintEnd_toEndOf="@+id/kotak6"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toEndOf="@+id/btn_home_on"
+        app:layout_constraintTop_toTopOf="@+id/btn_home_on"
+        app:layout_constraintVertical_bias="0.85"
+        app:srcCompat="@drawable/tombol_kuis" />
+
+    <ImageButton
+        android:id="@+id/btn_riwayat"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kuis"
+        app:layout_constraintEnd_toEndOf="@+id/kotak6"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/btn_kuis"
+        app:layout_constraintTop_toTopOf="@+id/btn_kuis"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/tombol_riwayat" />
+
+    <ImageButton
+        android:id="@+id/btn_profil"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_riwayat"
+        app:layout_constraintEnd_toEndOf="@+id/kotak6"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/btn_riwayat"
+        app:layout_constraintTop_toTopOf="@+id/btn_riwayat"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tombol_profil" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="367dp"
+        android:layout_height="198dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/home_kotak3"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/kotak1"
+        app:layout_constraintStart_toStartOf="@+id/kotak1"
+        app:layout_constraintTop_toBottomOf="@+id/kotak1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinputedittext"
+            android:layout_width="363dp"
+            android:layout_height="190dp"
+            android:hint="masukkan code anda disini..."
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/firacode_light"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:padding="5dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btn_kaca"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/kotak1"
+        app:layout_constraintVertical_bias="0.90999997"
+        app:srcCompat="@drawable/kaca" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firacode_bold"
+        android:text="Kamera"
+        android:textColor="@color/birumuda"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kamera"
+        app:layout_constraintEnd_toEndOf="@+id/btn_kamera"
+        app:layout_constraintStart_toStartOf="@+id/btn_kamera"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ickamera"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firacode_bold"
+        android:text="Galeri"
+        android:textColor="@color/birumuda"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_galeri"
+        app:layout_constraintEnd_toEndOf="@+id/btn_galeri"
+        app:layout_constraintStart_toStartOf="@+id/btn_galeri"
+        app:layout_constraintTop_toBottomOf="@+id/galeri"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/firacode_bold"
+        android:text="Terkini"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_riwayatbaru"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_kamera"
+        app:layout_constraintTop_toBottomOf="@+id/btn_kamera"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/galeri"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_galeri"
+        app:layout_constraintEnd_toEndOf="@+id/btn_galeri"
+        app:layout_constraintStart_toStartOf="@+id/btn_galeri"
+        app:layout_constraintTop_toTopOf="@+id/btn_galeri"
+        app:layout_constraintVertical_bias="0.42000002"
+        app:srcCompat="@drawable/galeri" />
+
+    <ImageButton
+        android:id="@+id/btn_ickamera"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kamera"
+        app:layout_constraintEnd_toEndOf="@+id/btn_kamera"
+        app:layout_constraintStart_toStartOf="@+id/btn_kamera"
+        app:layout_constraintTop_toTopOf="@+id/btn_kamera"
+        app:layout_constraintVertical_bias="0.411"
+        app:srcCompat="@drawable/kamera" />
+
+    <TextView
+        android:id="@+id/btn_riwayatbaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/firacode_regular"
+        android:scaleType="fitXY"
+        android:text="Lihat semua >"
+        android:textColor="@color/abu"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_galeri"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="@+id/btn_galeri"
+        app:layout_constraintTop_toBottomOf="@+id/btn_galeri"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/abu" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="65dp"
+        android:layout_height="4dp"
+        android:background="@color/birumuda"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

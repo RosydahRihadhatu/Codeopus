@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" /> <!-- Background transparan -->
+    <stroke android:width="2dp" android:color="#000000" /> <!-- Outline warna hitam -->
+    <corners android:radius="4dp" /> <!-- Sudut membulat, opsional -->
+</shape>

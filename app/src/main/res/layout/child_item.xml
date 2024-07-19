@@ -1,0 +1,42 @@
+<!-- res/layout/child_item.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/tvChildItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Child Item"
+        android:fontFamily="@font/firacode_regular"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/bg_child"/>
+
+    <ImageView
+        android:id="@+id/btn_play"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="14dp"
+        app:srcCompat="@drawable/play_button"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/firacode_bold"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".db.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CODEOPUS"
+        tools:targetApi="31">
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".bahasaprofil.FragmentJavascriptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bahasaprofil.FragmentCssActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bahasaprofil.FragmentHtmlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bahasaprofil.FragmentJavaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bahasaprofil.FragmentDartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bahasaprofil.FragmentKotlinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bahasaprofil.FragmentPythonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SoalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RiwayatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".HasilJawabanBerhasilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HasilJawabanGagalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TingkatanKuisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".riwayat.FragmentRiwayatKuisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TranslateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".riwayat.FragmentRiwayatTerjemahanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KuisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreenActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
